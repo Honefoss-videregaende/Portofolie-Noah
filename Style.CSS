@@ -1,0 +1,154 @@
+*{
+    margin: 0; /*setter margin til 0 på nettsiden*/
+    padding: 0; /*setter pading til 0 på nettsiden */
+    box-sizing: border-box; /*den holder det inne for en vis plass*/
+    text-decoration: none; /*det gjør sånn at vi ikke kan ha pynt på teksten */
+    list-style: none; 
+}
+body{
+    font-family: poppins,sans-serif; /*det er en type skrift type */
+    color: white; /*dette er bare farge */
+}
+.container{
+    height: 100vh; /*Dette er høyde */ 
+    width: 100%; /*Dette er bredde */
+    background: url('img/b.jpg'); /*Dette er bakgrunnen på starter siden */
+    background-position: center; /*Dette er posisjonen til backgrunnen */ 
+    background-repeat: no-repeat; /*Dette gjør sånn bakgrunns bilde ikke legger til flere bilder */
+    background-size: cover; /*Dette er størrelsen på bilde */ 
+    position: relative; /*Posisjonen på bilde */ 
+} 
+.container nav{
+    width: 100%;
+    height: 90px;
+    display: flex; 
+    justify-content: space-between; /*Bestemmer avstand */
+    align-items: center; /*Center det som er sagt */
+    padding:0 7%; 
+}
+nav .logo img{
+    width: 120px;
+}
+nav ul li{
+    display: inline-block;
+    margin: 0 1.2rem;
+    line-height: 90px;font-size: 18px;/*Det er linje høyde */
+    color: white;
+}
+nav ul li a{
+    color: white;
+    font-size: 16px; /*Støreslen på fonten */
+    display: inline-block;
+    position: relative;
+}
+nav ul li a::after{
+    content:"";
+    position: absolute;
+    top: 70%; /*hvor mye avstand den skal ha fra den plassen */ 
+    left: 0; /*samme ting som den over */
+    height: 4px;
+    width: 0;
+    background-color: #33bc6f; /*Bakgrunns farge */
+    border-radius: 10px; /*Sider på bilder blir runda */
+    transition: 0.5s; /*Hvor lenge hver trasnisjon varer */
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+nav .toggle{
+    font-size: 32px;
+    display: none;
+}
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /*Hvilken retning du vil ha ting */
+    min-height: 80vh;
+    width: 100%;
+}
+.header h1 {
+    font-size: 5rem;
+    letter-spacing: 3px; /*Hvor mye avstand du skal ha til de forskjelige ordene  */
+    margin-bottom: 20px; /*Hvor mye avstand du har fra bunnen */
+}
+.header h4 {
+    font-size: 2rem;
+    font-weight: 400; /*Størelsen på skriften */
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+}
+.header h4 span {
+    color: #33bc6f;
+}
+.header .btn-group a{
+    padding: 12px 20px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    background-color: #33bc6f;
+    margin: 20px 10px;
+    border-radius: 30px;
+    color: black;
+    border: 0;
+    outline: none; /*Om det skal være en linje rundt skriften  */
+    transition: 0.5s;
+}
+.header .btn-group a:hover{
+    background-color: transparent;
+    border: 2px solid #33bc6f;
+    color: #33bc6f;
+}
+.container .social-icons{
+    position: absolute;
+    right: 5%; /*Sier hvilken vei ting skal */
+    bottom: 5%; /*Sier hvilken vei ting skal */
+}
+.container .social-icons i{
+    color: aliceblue;
+    display: block;
+    margin: 20px 0;
+    font-size: 18px;
+    transition: 0.5s;
+}
+.container .social-icons i:hover{
+    color: #33bc6f;
+    transform: scale(1.2); /*Hva det skal transformere seg til */
+
+}
+@media (max-width:900px) { /*Størelsen på bilde */
+    nav .toggle{
+        display: block;
+    }
+    nav{
+        position:relative;
+        padding: 0 7%;
+    }
+    nav ul{
+        position: absolute;
+        top: 70%;
+        right: 18%;
+        background-color: #191919;
+        padding:22px;
+        width: 50%;
+        display: none;
+        transition: 0.6s ease-in-out;
+    
+    }
+    nav ul.show{
+        display: block;
+    }
+    nav ul li{
+        display: block;
+        margin: 20px 10px;
+        line-height: 50px;
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+    header h1{
+        font-size: 3rem;
+        text-align: center;
+    }
+    header h4{
+        font-size: 2.2rem;
+    }
+}
