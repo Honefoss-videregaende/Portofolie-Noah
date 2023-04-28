@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noah Vollan</title>
+    <link rel="stylesheet" href="style.css"> <!--Dette linker siden til CSS-->
+    <!--Font awsome CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"><!--Dette er en type Font-->
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <div class="logo"> <!--Dette er en class-->
+                <img src="img/Logo til nettsiden.png"> <!--Dette er logoen til nettsiden som jeg har laget på Photoshop-->
+            </div>
+
+            <ul>
+                <li><a href="Index.HTML">Home</a></li>
+                <li><a href="Fritid.html">Fritid</a></li> <!--Disse 4 er linjer-->
+                <li><a href="Familie.html">Familie</a></li>
+                <li><a href="Prosjekter.html">Prosjekter</a></li>
+            </ul>
+            <div class="toggle">
+                <i class="fa-solid fa- bars-staggerd"></i>
+            </div>
+        </nav>
+
+        <div class="header">
+            <h1>Noah Vollan</h1>
+            <h4>Jeg er en <span class="multi-text"></span></h4> 
+            <div class="btn-group"> <!--Dette er knappene-->
+                <a href="https://www.fotball.no/fotballdata/person/profil/?fiksId=3414715">Fotball statestikk</a> <!--Dette er linkene til de forskjelige nettsidene knappene tar deg til-->
+                <a href="https://fotball.jif.no/">JIF</a>
+            </div>
+        </div>
+        <!--Dette er linkene til alle logoene pluss hvordan jeg lo til logoene-->
+        <div class="social-icons">
+         <a href="https://www.facebook.com/noah.vollan"><i class="fa-brands fa-facebook"></i></a>   
+         <a href="/img/snapcodeBitmoji.svg"><i class="fa-brands fa-snapchat"></i></a>
+         <a href="https://www.youtube.com/channel/UCgstVbtU96_6D8thgkaUjbQ"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+    </div>
+
+    <!--text typing effect-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+    <script>
+        var typed=new Typed('.multi-text',{
+            strings:["Fotball spiller","Gamer","It elev","6-er elev i gym","195cm"],
+            typeSpeed:60,
+            loop:true 
+        })
+
+        /*** responsive toggle menu ***/
+        let toggle=document.querySelecotr(".toggle");
+        let navbar=document.querySelector("ul");
+        toggle.addEventListener("click",()=>{
+            navbar.classList.toggle("show");
+        })
+    </script>
+</body>
+</html> 
